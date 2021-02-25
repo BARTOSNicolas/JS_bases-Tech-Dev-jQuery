@@ -6,6 +6,9 @@ console.log('----------');
 // selecteur de Class $('.class')
 // selecteur de ID $('#id')
 
+
+$(document).ready(function (){
+
 let title = $('#title');  //Selectionne l'id title
 let sidemenu = $('.nav *'); // Selectionne tous les element de la class nav
 let footer = $('footer'); //Selectionne les tags footer
@@ -16,3 +19,5 @@ let paraIntro = $('.intro'); //select toutes les class intro
 let imgTime = $('img.glyphicon-time'); // select toutes les img qui ont la class glyphicon-time
 let navFirstEl = $('.sidenav *:gt(0)');//Select la premier elemen dans la sidenav
 let paraEven = $('p:even'); // Select un paragraphe sur deux trier par paire
+
+});
