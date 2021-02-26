@@ -4,13 +4,50 @@
 <head>
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
+
     <div class="container">
+        <h1 class="fs-1 pb-5 text-center mt-5">Pierre - Feuille - Ciseaux</h1>
+        <section id="choice" class="d-flex flex-column align-items-center pb-5">
+            <h2 class="fs-3">Fais ton choix : </h2>
+            <div class="row w-50">
+                <button class="btn col-4"><img class="img-responsive" src="img/pierre.svg" alt="Pierre"></button>
+                <button class="btn col-4"><img class="img-responsive" src="img/feuille.svg" alt="Feuille"></button>
+                <button class="btn col-4"><img class="img-responsive" src="img/ciseaux.svg" alt="Ciseaux"></button>
+            </div>
+        </section>
+        <section class="row mb-5">
+            <div id="userChoice" class="col-3 offset-2">
+                <h2 class="fs-3 text-center">Tu as choisi </h2>
+
+            </div>
+            <div class="vs col-2 d-flex flex-column align-items-center">
+                <p id="round" class="fs-5 fw-bold">Round : <span>0</span></p>
+                <p id="score" class="fs-6 fw-bold"> Player : <span>0</span> / Computer : <span>0</span></p>
+                <img src="img/vs.svg" alt="versus" class="w-50">
+            </div>
+            <div id="computerChoice" class="col-3">
+                <h2 class="fs-3 text-center">L'ordi a choisi </h2>
+            </div>
+        </section>
+        <section id="result" class="w-50 mx-auto">
+            <div class="alert alert-success" role="alert" id="win" style="display: none">
+                Tu as Gagné !!
+            </div>
+            <div class="alert alert-danger" role="alert" id="lose" style="display: none">
+                Tu as Perdu !!
+            </div>
+            <div class="alert alert-warning" role="alert" id="tied" style="display: none">
+               C'est égalité !!
+            </div>
+        </section>
+
+
     </div>
 </body>
 
