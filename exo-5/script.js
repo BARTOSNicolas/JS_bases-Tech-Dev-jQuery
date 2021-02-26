@@ -4,10 +4,7 @@ $(document).ready(function () {
     ////// PLAYER //////
     // -- Player Choice --
     function getPlayerChoice(choice) {
-        let playerChoice = '';
-        playerChoice = choice.attr("alt").toLowerCase();
-        console.log(playerChoice);
-        return playerChoice;
+        return choice.attr("alt").toLowerCase();
     }
 
     // -- Affiche Player Choice --
@@ -16,10 +13,8 @@ $(document).ready(function () {
         img.removeClass('col-4')
         if ($('#userChoice img')) {
             $('#userChoice img').remove();
-            $('#userChoice').append(img);
-        } else {
-            $('#userChoice').append(img);
         }
+        $('#userChoice').append(img);
     }
 
     ////// COMPUTER //////
@@ -37,10 +32,9 @@ $(document).ready(function () {
         let img = $('<img>');
         if ($('#computerChoice img')) {
             $('#computerChoice img').remove();
-            $('#computerChoice').append(img);
-        } else {
-            $('#computerChoice').append(img);
         }
+        $('#computerChoice').append(img);
+
         // Bonus affichage de Ouf
         let random = ["pierre", "feuille", "ciseaux", "pierre", "feuille", "ciseaux", "pierre", "feuille", "ciseaux", "pierre", "feuille", "ciseaux", "pierre", "feuille", "ciseaux", "pierre", "feuille", "ciseaux", choice]
         for (let i = 0; i < random.length; i++) {

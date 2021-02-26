@@ -5,16 +5,21 @@ $(document).ready(function(){
     let email = $('input[name="email"]');
     let password = $('input[name="password"]');
 
+    function createErrorMsg(text, where){
+        let err = $('<div></div>');
+        err.addClass('alert alert-danger');
+        err.text(text);
+        where.after(err);
+    }
+    function checkMail(mail)
+    {
+        var reg = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
+        return(reg.test(mail));
+    }
+
     formulaire.submit(function (event) {
         event.preventDefault(); //Annule le clique
         $('.alert').remove();
-        function createErrorMsg(text, where){
-            let err = $('<div></div>');
-            err.addClass('alert alert-danger');
-            err.text(text);
-            where.after(err);
-        }
-
 
         if (email.val() === '') {
             createErrorMsg('Email obligatoire', email);
@@ -27,15 +32,9 @@ $(document).ready(function(){
             createErrorMsg('Plus de 6 charactères', password)
         }
         if (email.val() === 'hello@me.com' && password.val() === 'secret8'){
-            alert('Vous êtes conncté !!! (ou pas)')
+            alert('Vous êtes connecté !!! (ou pas)')
         }
 
     });
-
-    function checkMail(mail)
-    {
-        var reg = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
-        return(reg.test(mail));
-    }
 
 })
