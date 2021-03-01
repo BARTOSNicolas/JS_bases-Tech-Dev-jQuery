@@ -5,6 +5,8 @@ function getData() {
 
 $(document).ready(function () {
 
+
+
     function addLineToTable(objet) {
         let line = $('<tr>\n' +
             '<th scope="row">' + objet.id + '</th>\n' +
@@ -45,5 +47,9 @@ $(document).ready(function () {
       })
     })
     addWithPagi(0,50);
+
+    $('#table').tablesort();
+
+
 
 })

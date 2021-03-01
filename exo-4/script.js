@@ -16,8 +16,8 @@ $(document).ready(function(){
     // $('#myNavbar li:eq(1)').dblclick(() => {
     //     $('#myNavbar li:eq(1)').hide(); //This ne marche pas :(
     // });
-    $('#myNavbar li:eq(1)').on('dblclick',() => {
-        $(this).hide(); //This  marche  :)
+    $('#myNavbar li:eq(1)').on('dblclick', function () {
+        $(this).hide();//This  marche  :)
     });
 
     //4
